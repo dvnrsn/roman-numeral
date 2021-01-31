@@ -1,0 +1,27 @@
+{
+  "name": "roman-numeral",
+  "version": "1.0.0",
+  "description": "A simple http server that converts provided int to roman numeral",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvnrsn/roman-numeral.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvnrsn/roman-numeral/issues"
+  },
+  "homepage": "https://github.com/dvnrsn/roman-numeral#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
