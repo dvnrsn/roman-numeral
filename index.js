@@ -16,6 +16,10 @@ app.get('/romannumeral', (req, res) => {
   }
 })
 
+app.get('*', (req, res) => { // fallback
+  res.status(404).send()
+})
+
 app.listen(8080, () => {
   console.log('Listening to port 8080')
 })
