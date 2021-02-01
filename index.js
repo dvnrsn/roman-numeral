@@ -2,6 +2,7 @@ const express = require('express')
 const { convertToRoman } = require('./functions/convert-to-roman')
 const { isPositiveInt } = require('./functions/validate')
 const app = express()
+const fs = require('fs')
 
 app.get('/romannumeral', (req, res) => {
   let error
@@ -15,8 +16,10 @@ app.get('/romannumeral', (req, res) => {
   }
   if (error) {
     res.status(400).send(error)
+    fs.appendFile('error.txt', `\n${req.connection.remoteAddress} | ${providedValue} | ${new Date().toISOString()}`, (err) => console.log(err))
   } else {
     res.send(convertToRoman(providedValue))
+    fs.appendFile('logging.txt', `\n${req.connection.remoteAddress} | ${providedValue} | ${new Date().toISOString()}`, (err) => console.log(err))
   }
 })
 
