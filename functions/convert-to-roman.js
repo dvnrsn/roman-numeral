@@ -1,4 +1,4 @@
-function convertToRoman(int) {
+const convertToRoman = int => {
   var romanRef = {
     // https://en.wiktionary.org/wiki/Appendix:Latin_cardinal_numerals
     M: 1000,
@@ -46,7 +46,7 @@ module.exports = {
 //   1000: 'M'
 // };
 
-// export const convertToRoman = int => {
+// const convertToRoman = int => {
 //   const parsed = parseInt(int) // parseInt here takes '03' (from say 103) to 3
 //   const numbers = Object.keys(romanRef);
 //   let nextHighest, nextLowest
