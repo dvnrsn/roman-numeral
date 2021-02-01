@@ -1,5 +1,5 @@
 # roman-numeral
-A simple http server that converts provided int to roman numeral
+A simple http server that converts a positive integer to respective roman numeral
 
 ## How to build and run
 ```
@@ -7,6 +7,7 @@ npm install
 npm start
 curl localhost:8080/romannumeral?query=123
 ```
+Note: if query is missing or if integer is not a positive integer, the endpoint returns a 400 and error message.
 
 ## Testing
 Tests are articulated for
