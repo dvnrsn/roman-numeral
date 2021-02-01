@@ -1,5 +1,3 @@
-const numbers = [1000, 500, 400, 100, 50, 40, 10, 5]
-
 function convertToRoman(int) {
   var romanRef = {
     // https://en.wiktionary.org/wiki/Appendix:Latin_cardinal_numerals
