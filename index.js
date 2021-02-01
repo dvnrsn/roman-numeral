@@ -10,6 +10,8 @@ app.get('/romannumeral', (req, res) => {
     error = "No value was provided on the expected query parameter: ?query={integer}";
   } else if (!isPositiveInt(providedValue)) {
     error = `'${providedValue}' is not a valid positive integer`;
+  } else if (providedValue > 3999) {
+    error = `'${providedValue}' is greater than the supported 3999`
   }
   if (error) {
     res.status(400).send(error)
